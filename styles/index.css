@@ -21,7 +21,7 @@ body {
   justify-content: center;
 }
 
-@media screen and (max-width:600px) {
+@media screen and (max-width: 600px) {
   body {
     height: auto;
     background-color: var(--Very-dark-blue);
@@ -32,18 +32,18 @@ body {
 }
 
 .container {
-  width: 79vw;
-  height: 65vh;
-  min-width: 79vw;
-
+  width: 75vw;
+  height: 45vh;
+  max-width: 1100px;
+  max-height: 430px;
   background-color: var(--Dark-desaturated-blue);
   border-radius: 10px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
 
-@media screen and (max-width:600px) {
-  .container{
+@media screen and (max-width: 600px) {
+  .container {
     display: flex;
     flex-direction: column;
     flex-direction: column-reverse;
@@ -51,7 +51,8 @@ body {
     justify-content: center;
     margin-top: 4rem;
     width: 90%;
-    height: 80vh;
+    height: auto;
+    max-height: none;
     padding-bottom: 0.1rem;
   }
 }
@@ -60,31 +61,30 @@ body {
 .right {
   overflow: hidden;
   position: relative;
-  border-radius: 0 10px  10px 0;
+  border-radius: 0 10px 10px 0;
 }
 
 .left {
   padding: 3rem;
-  padding-right: 5rem;
+  padding-right: 20%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   font-family: "Lexend Deca", sans-serif;
 }
 
-@media screen and (max-width:600px) {
-  .left{
+@media screen and (max-width: 600px) {
+  .left {
     width: 100%;
-    height: 180%;
-    padding: 1rem;
+    padding: 2rem;
   }
 }
 
-@media screen and (max-width:600px) {
-  .right{
+@media screen and (max-width: 600px) {
+  .right {
     width: 100%;
-    height: 100%;
-    border-radius:  10px 10px 0 0;
+    height: 270px;
+    border-radius: 10px 10px 0 0;
   }
 }
 
@@ -94,12 +94,10 @@ body {
   margin-bottom: 2rem;
 }
 
-@media screen and (max-width:600px) {
+@media screen and (max-width: 600px) {
   .left .title {
-    color: var(--White);
-    margin-top: 0.2rem;
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
+    margin-top: 1.25rem;
+    font-size: 1.75rem;
     text-align: center;
     margin-left: 0.2rem;
     margin-right: 0.2rem;
@@ -118,14 +116,11 @@ body {
   text-align: left;
 }
 
-@media screen and (max-width:600px) {
+@media screen and (max-width: 600px) {
   .left .text {
-  color: var(--Slightly-transparent-white);
-  margin-bottom: 0.0rem;
-  line-height: 1rem;
-  word-spacing: 2px;
-  font-size: 11px;
-  text-align: center;
+    margin-bottom: 2rem;
+    word-spacing: 2px;
+    text-align: center;
   }
 }
 
@@ -135,8 +130,8 @@ body {
   font-family: "Inter", sans-serif;
 }
 
-@media screen and (max-width:600px) {
-   .left .footer {
+@media screen and (max-width: 600px) {
+  .left .footer {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -146,6 +141,9 @@ body {
   }
 }
 
+.left .footer {
+  margin-right: 2rem;
+}
 
 .left .footer .item .value {
   text-transform: uppercase;
@@ -154,36 +152,28 @@ body {
   margin-bottom: 0.5rem;
 }
 
-@media screen and (max-width:600px) {
+@media screen and (max-width: 600px) {
   .left .footer .item {
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   justify-content: center;
-   margin-top: 0.7rem;
- }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.7rem;
+  }
 }
 
-@media screen and (max-width:600px) {
+@media screen and (max-width: 600px) {
   .left .footer .item .value {
-   font-size: 15px;
-   margin-bottom: 0.1rem;
- }
+    margin-bottom: 0.5rem;
+  }
 }
 
 .left .footer .item .label {
+  font-family: "Lexend Deca";
   text-transform: uppercase;
   color: var(--Slightly-transparent-white);
   font-size: 0.85rem;
 }
-
-@media screen and (max-width:600px) {
-.left .footer .item .label {
-   font-size: 9px;
-   
- }
-}
-
 
 .right img {
   object-fit: cover;
@@ -192,7 +182,7 @@ body {
   height: 100%;
   top: 50%;
   left: 50%;
-  
+
   transform: translate(-50%, -50%);
 }
 
@@ -203,4 +193,3 @@ body {
   opacity: 0.5;
   z-index: 2;
 }
-
